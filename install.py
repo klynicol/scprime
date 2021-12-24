@@ -9,6 +9,7 @@ import requests
 import sys
 import zipfile
 import shutil
+import configparser
 
 DIR_BASE = ""
 DIR_ZIP = DIR_BASE + "zip"
@@ -38,6 +39,21 @@ mkdir(DIR_CURRENT)
 mkdir(DIR_DATA)
 mkdir(DIR_EXTRACT)
 mkdir(DIR_PROFILES)
+
+#make the .ini
+import configparser
+ini = configparser.ConfigParser()
+
+#see if we can pick out the drives on the device
+
+
+ini['DEFAULT'] = {
+    'SEED': '',
+    'DRIVES': '',
+    'CompressionLevel': '9'
+}
+with open('.ini', 'w') as configfile:
+    ini.write(configfile)
 
 #Download the file into the DIR_ZIP folder
 def download(url):

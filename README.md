@@ -20,6 +20,9 @@
 - `git clone https://github.com/klynicol/scprime.git`
 - `cd scprime`
 - `python3 install.py 1.6.0`
+- `vi .ini`
+- paste in the following
+    `SEED = `
 - `python3 run.py init`
 - BLOCKCHAIN NOW SYNCING, check back in a few hours and check consensus with spc
 - `cd current`
