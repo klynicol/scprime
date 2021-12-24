@@ -1,7 +1,7 @@
 # Installation
-### drive setup
-`sudo fdisk -l` view drives and partitions
-`sudo fdisk /dev/sda` then press n to create partition
+>### drive setup
+>`sudo fdisk -l` view drives and partitions
+>`sudo fdisk /dev/sda` then press n to create partition
 `cd /mnt`
 `sudo mkdir sda1` make folders the same names as the partitions
 `sudo mount /dev/sda1 /mnt/sda1` mount the drives
