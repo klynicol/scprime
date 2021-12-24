@@ -1,2 +1,11 @@
 README.md
 .ini
+current/
+data/
+extract/
+profiles/
+zip/
+
+nohup.out
+run.log
+spd.log
