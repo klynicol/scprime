@@ -12,13 +12,6 @@ import zipfile
 import shutil
 import configparser
 
-DIR_BASE = ""
-DIR_ZIP = DIR_BASE + "zip"
-DIR_CURRENT = DIR_BASE + "current"
-DIR_DATA = DIR_BASE + "data"
-DIR_EXTRACT = DIR_BASE + "extract"
-DIR_PROFILES = DIR_BASE + "profiles"
-
 if(len(sys.argv) <= 1):
     print("ersion parameter required")
     sys.exit()
@@ -27,7 +20,7 @@ version = sys.argv[1]
 version_full = f'ScPrime-v{version}-linux-arm64'
 zip_filename = f'{version_full}.zip'
 zip_url =  f'https://releases.scpri.me/{version}/{zip_filename}'
-zip_file_path = DIR_ZIP + "/" + version + ".zip"
+zip_file_path = common.DIR_ZIP + "/" + version + ".zip"
 
 #helper function, checking if dir exists first then making that dir
 def mkdir(path):
@@ -35,11 +28,12 @@ def mkdir(path):
         os.mkdir(path)
 
 #setup folder structure
-mkdir(DIR_ZIP)
-mkdir(DIR_CURRENT)
-mkdir(DIR_DATA)
-mkdir(DIR_EXTRACT)
-mkdir(DIR_PROFILES)
+mkdir(common.DIR_ZIP)
+mkdir(common.DIR_CURRENT)
+mkdir(common.DIR_DATA)
+mkdir(common.DIR_EXTRACT)
+mkdir(common.DIR_PROFILES)
+mkdir(common.DIR_REPORT_DATA)
 
 #see if we can pick out the hard drive names on the device
 line_count = 0
@@ -56,12 +50,13 @@ ini = configparser.ConfigParser()
 ini['host'] = {
     'seed': '',
     'drives': '|'.join(drives),
-    
+    'max_wallet_balance' : 500,
+    'to_address' : 'dfaeieiofajfkeakefjdjd'
 }
 with open('.ini', 'w') as configfile:
     ini.write(configfile)
 
-#Download the file into the DIR_ZIP folder
+#Download the file into the common.DIR_ZIP folder
 def download_cli(url):
     if(os.path.isfile(zip_file_path)):
         print("zip file already exists in the zip folder")
@@ -79,26 +74,26 @@ download_cli(zip_url)
 
 #unzip the file cotents into /current folder
 with zipfile.ZipFile(zip_file_path) as myzip:
-    myzip.extractall(path=DIR_EXTRACT)
+    myzip.extractall(path=common.DIR_EXTRACT)
 
 '''
 Next we have to take the contents of the extracted file and stick them
-into DIR_CURRENT folder. Scprime team is currently creating a root folder
+into common.DIR_CURRENT folder. Scprime team is currently creating a root folder
 inside the zip with the same name as the zip. If that changes, change the
 `extracted_folder` variable
 '''
-extracted_folder = DIR_EXTRACT + "/" + version_full
+extracted_folder = common.DIR_EXTRACT + "/" + version_full
 #first check if the file were expecting to get is there
 if(not os.path.isdir(extracted_folder)):
     print(f"{extracted_folder} doesn't exist, make sure the zip file has the correct contents")
     print("exiting script")
     sys.exit()
 
-#clear the DIR_CURRENT foler
-common.remove_contents(DIR_CURRENT)
+#clear the common.DIR_CURRENT foler
+common.remove_contents(common.DIR_CURRENT)
 
-#make the transfer from the extacted folder to DIR_CURRENT
-common.move_contents(extracted_folder, DIR_CURRENT)
+#make the transfer from the extacted folder to common.DIR_CURRENT
+common.move_contents(extracted_folder, common.DIR_CURRENT)
 
 #clean up the extracted_folder
 shutil.rmtree(extracted_folder)
