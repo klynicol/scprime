@@ -10,6 +10,7 @@ from time import sleep
 import subprocess
 import pathlib
 import configparser
+import common
 
 logging.basicConfig(filename="run.log", level=logging.INFO)
 
@@ -33,12 +34,6 @@ os.environ["SCPRIME_WALLET_PASSWORD"] = SEED
 def log(level, message):
     print(message)
     logging.__getattribute__(level)(message)
-
-#Run a command and rerturn the results as array
-def run_process(cmd):
-    args = cmd.split()
-    result = subprocess.run(args, capture_output=True, text=True)
-    return repr(result.stdout).split("\n")
 
 #Check if process is already running
 def is_process_running(process_name):
@@ -76,7 +71,7 @@ def startup():
 #     startup()
 
 def check_disks():
-    print(run_process("lsblk -S`"))
+    print(common.run_process("lsblk -S"))
 
 check_disks()
 

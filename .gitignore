@@ -9,3 +9,5 @@ zip/
 nohup.out
 run.log
 spd.log
+
+__pycache__/

@@ -3,6 +3,7 @@ Setup folder structure and download cli for ScPrime host
 
 [ ] chmod entire folder structure
 '''
+import common
 
 import os
 import requests
@@ -45,11 +46,17 @@ import configparser
 ini = configparser.ConfigParser()
 
 #see if we can pick out the drives on the device
-
+line_count = 0
+drives = []
+for line in common.run_process("lsblk -S"):
+    line_count += 1
+    if(line == 1 or not line):
+        continue
+    drives.extend(line.split(" ")[0])
 
 ini['DEFAULT'] = {
     'SEED': '',
-    'DRIVES': '',
+    'DRIVES': '|'.join(drives),
     'CompressionLevel': '9'
 }
 with open('.ini', 'w') as configfile:
@@ -89,20 +96,10 @@ if(not os.path.isdir(extracted_folder)):
     sys.exit()
 
 #clear the DIR_CURRENT foler
-def remove_contents(path):
-    for c in os.listdir(path):
-        full_path = os.path.join(path, c)
-        if os.path.isfile(full_path):
-            os.remove(full_path)
-        else:
-            shutil.rmtree(full_path)
-remove_contents(DIR_CURRENT)
+common.remove_contents(DIR_CURRENT)
 
 #make the transfer
-def move_contents(src, dst):
-    for elem in os.listdir(src):
-        shutil.move(os.path.join(src, elem), dst=dst)
-move_contents(extracted_folder, DIR_CURRENT)
+common.move_contents(extracted_folder, DIR_CURRENT)
 
 #clean up the extracted_folder
 shutil.rmtree(extracted_folder)
