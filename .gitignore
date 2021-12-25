@@ -1,13 +1,18 @@
 README.md
 .ini
+
+#directories
 current/
 data/
 extract/
 profiles/
 zip/
 
+#logs
 nohup.out
 run.log
 spd.log
 
 __pycache__/
+
+test.py

@@ -6,6 +6,8 @@ from subprocess import run
 import os
 from shutil import rmtree
 from shutil import move
+import smtplib
+from email.message import EmailMessage
 
 #Run a command and rerturn the results as array
 def run_process(cmd):
@@ -24,3 +26,14 @@ def remove_contents(path):
 def move_contents(src, dst):
     for elem in os.listdir(src):
         move(os.path.join(src, elem), dst=dst)
+
+def send_email(subject, body, to="mwicklinedev@gmail.com"):
+    msg = EmailMessage()
+    msg['From'] = "noreply@markwickline.com"
+    msg['To'] = to
+    msg['Subject'] = subject
+    msg.set_content(body)
+    server = smtplib.SMTP_SSL('smtp.dreamhost.com', 465)
+    server.ehlo()
+    server.login("noreply@markwickline.com", "scprimetothemoon")
+    server.send_message(msg)

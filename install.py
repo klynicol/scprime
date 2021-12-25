@@ -41,29 +41,28 @@ mkdir(DIR_DATA)
 mkdir(DIR_EXTRACT)
 mkdir(DIR_PROFILES)
 
-#make the .ini
-import configparser
-ini = configparser.ConfigParser()
-
-#see if we can pick out the drives on the device
+#see if we can pick out the hard drive names on the device
 line_count = 0
 drives = []
 for line in common.run_process("lsblk -S"):
     line_count += 1
-    if(line == 1 or not line):
+    if(line_count == 1 or not line):
         continue
     drives.extend(line.split(" ")[0])
 
-ini['DEFAULT'] = {
-    'SEED': '',
-    'DRIVES': '|'.join(drives),
-    'CompressionLevel': '9'
+#make the .ini
+import configparser
+ini = configparser.ConfigParser()
+ini['host'] = {
+    'seed': '',
+    'drives': '|'.join(drives),
+    
 }
 with open('.ini', 'w') as configfile:
     ini.write(configfile)
 
 #Download the file into the DIR_ZIP folder
-def download(url):
+def download_cli(url):
     if(os.path.isfile(zip_file_path)):
         print("zip file already exists in the zip folder")
         return
@@ -76,7 +75,7 @@ def download(url):
         for chunk in get_response.iter_content(chunk_size=1024):
             if chunk: # filter out keep-alive new chunks
                 f.write(chunk)
-download(zip_url)
+download_cli(zip_url)
 
 #unzip the file cotents into /current folder
 with zipfile.ZipFile(zip_file_path) as myzip:
@@ -98,7 +97,7 @@ if(not os.path.isdir(extracted_folder)):
 #clear the DIR_CURRENT foler
 common.remove_contents(DIR_CURRENT)
 
-#make the transfer
+#make the transfer from the extacted folder to DIR_CURRENT
 common.move_contents(extracted_folder, DIR_CURRENT)
 
 #clean up the extracted_folder
