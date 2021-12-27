@@ -11,6 +11,8 @@ from email.message import EmailMessage
 import re
 import pathlib
 import configparser
+import logging
+from datetime import datetime
 
 DIR_BASE = str(pathlib.Path.home()) + "/scprime/"
 DIR_ZIP = DIR_BASE + "zip"
@@ -26,11 +28,26 @@ HOSTNAME = os.uname()[1]
 config = configparser.ConfigParser()
 config.read(f"{DIR_BASE}.ini")
 
+logging.basicConfig(filename=f"{DIR_BASE}run.log", level=logging.INFO)
+
+#Log helper function
+#level= info | debug | warning | error
+def log(level, message):
+    dt = datetime.now().strftime("%Y-%m-%d %I:%M%p")
+    message = f" {dt}: {message}"
+    print(message)
+    logging.__getattribute__(level)(message)
+
 #Run a command and rerturn the results as array
 def run_process(cmd):
     args = cmd.split()
     result = run(args, capture_output=True, text=True)
     return repr(result.stdout).split("\n")
+
+    #Check if process is already running
+def is_process_running(process_name):
+    tmp = os.popen("ps -Af").read()
+    return tmp.count(process_name) > 0
 
 #Remove contents of a directory
 def remove_contents(path):
@@ -115,3 +132,10 @@ def parse_scp(raw):
         return False
     scp = float(f"{decimal}e{units[unit]['notation']}")
     return scp
+
+#represent a scp floating point value without scientific notation
+#used to insert SCP amount into commands
+def scp_string(scp_float):
+    s = f"{scp_float:.27f}"
+    s = re.sub('0{0,}$', '', s)
+    return s.strip(".")

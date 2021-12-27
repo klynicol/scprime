@@ -19,6 +19,7 @@ def smartctl():
             if "SMART overall-health self-assessment test result:" in line:
                 if "FAILED" in line:
                     # DISK FAILED, SEND MESSAGE
+                    common.log("error", f"Disk /dev/{disk_name} failed")
                     body = f"Disk /dev/{disk_name} failed on scprime host {common.HOSTNAME}"
                     common.send_email("Scprime Host Disk Failure!", body)
 

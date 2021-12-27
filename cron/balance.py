@@ -9,6 +9,8 @@ import sys
 sys.path.append("../scprime")
 import common
 
+common.log("info", "Starting balance.py cron task")
+
 '''
 Wallet status:
 Encrypted, Unlocked
@@ -33,4 +35,19 @@ def check_balance():
             common.send_email("Scprime Host Wallet Locked", body)
         if('Exact:' in line):
             balance = common.parse_scp(line.replace('Exact:', ''))
-            # if(balance > common.config['host']['max_wallet_balance']):
+            if(balance == False):
+                common.log("error", "Cannot parse exact SCP amount")
+                continue
+            max = common.config['host']['max_wallet_balance']
+            if(balance > max):
+                send_ammount = balance - max
+                #remove scientific notation
+                send_ammount = common.scp_string(send_ammount)
+                to_address = common.config['host']['to_address']
+                common.log("info", f"Sending {send_ammount}SCP to {to_address}")
+                response = common.run_process(f"{common.DIR_CURRENT}/spc send scprimecoins {send_ammount}SCP {to_address}")
+                common.log("info", response.join("\n"))
+
+check_balance()
+
+common.log("info", "Ending balance.py cron task")

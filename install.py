@@ -13,7 +13,7 @@ import shutil
 import configparser
 
 if(len(sys.argv) <= 1):
-    print("ersion parameter required")
+    print("version parameter required")
     sys.exit()
 
 version = sys.argv[1]
@@ -51,7 +51,11 @@ ini['host'] = {
     'seed': '',
     'drives': '|'.join(drives),
     'max_wallet_balance' : 500,
-    'to_address' : 'dfaeieiofajfkeakefjdjd'
+    'to_address' : 'dfaeieiofajfkeakefjdjd',
+    'host_port' : 4282,
+    'siamux_port': 4283,
+    'siamux_ws_port': 4284,
+    'host_api_port' : 4285
 }
 with open('.ini', 'w') as configfile:
     ini.write(configfile)
