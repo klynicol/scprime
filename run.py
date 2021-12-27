@@ -21,15 +21,18 @@ if(args_len > 1):
 os.environ["SCPRIME_WALLET_PASSWORD"] = common.config['host']['seed']
 
 #start the spd and set appropriate directories/ports, also redirect output to the spd.log file.
-def start_spd():
-    command = f"nohup {common.DIR_CURRENT}/spd"
+def start_spd(init = False):
+    command = (f"{common.DIR_CURRENT}/spd"
     f" --profile-directory {common.DIR_PROFILES}"
     f" --scprime-directory {common.DIR_DATA}"
     f" --host-addr :{common.config['host']['host_port']}"
     f" --siamux-addr :{common.config['host']['siamux_port']}"
     f" --siamux-addr-ws :{common.config['host']['siamux_ws_port']}"
     f" --host-api-addr :{common.config['host']['host_api_port']}"
-    " -M gtcwh &"
+    " -M gtcwh > spd.log")
+    if(init):
+        #Allow comand to run in the background
+        command += " &"
     os.system(command)
 
 #Init the spd. This is first first startup.
