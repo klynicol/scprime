@@ -16,3 +16,5 @@ spd.log
 __pycache__/
 
 test.py
+
+.py.swp

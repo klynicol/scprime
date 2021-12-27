@@ -15,6 +15,7 @@ import logging
 from datetime import datetime
 
 DIR_BASE = str(pathlib.Path.home()) + "/scprime/"
+# DIR_BASE = "/home/ubuntu/scprime/"
 DIR_ZIP = DIR_BASE + "zip"
 DIR_CURRENT = DIR_BASE + "current"
 DIR_DATA = DIR_BASE + "data"

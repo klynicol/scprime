@@ -38,7 +38,7 @@ mkdir(common.DIR_REPORT_DATA)
 #see if we can pick out the hard drive names on the device
 line_count = 0
 drives = []
-for line in common.run_process("lsblk -S"):
+for line in common.run_process("lsblk -S", '\\n'):
     line_count += 1
     if(line_count == 1 or not line):
         continue
@@ -48,13 +48,13 @@ for line in common.run_process("lsblk -S"):
 import configparser
 ini = configparser.ConfigParser()
 ini['host'] = {
+    'dir_base' : 
     'seed': '',
     'drives': '|'.join(drives),
     'max_wallet_balance' : 500,
     'to_address' : 'dfaeieiofajfkeakefjdjd',
     'host_port' : 4282,
     'siamux_port': 4283,
-    'siamux_ws_port': 4284,
     'host_api_port' : 4285
 }
 with open('.ini', 'w') as configfile:

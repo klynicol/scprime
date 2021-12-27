@@ -27,9 +27,9 @@ def start_spd(init = False):
     f" --scprime-directory {common.DIR_DATA}"
     f" --host-addr :{common.config['host']['host_port']}"
     f" --siamux-addr :{common.config['host']['siamux_port']}"
-    f" --siamux-addr-ws :{common.config['host']['siamux_ws_port']}"
+    # f" --siamux-addr-ws :{common.config['host']['siamux_ws_port']}"
     f" --host-api-addr :{common.config['host']['host_api_port']}"
-    " -M gtcwh > spd.log")
+    f" -M gtcwh > {common.DIR_BASE}spd.log")
     if(init):
         #Allow comand to run in the background
         command += " &"
