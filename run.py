@@ -20,7 +20,7 @@ if(args_len > 1):
 #spd takes this specific enviornment variable to unlock the wallet automatically
 os.environ["SCPRIME_WALLET_PASSWORD"] = common.config['host']['seed']
 
-#start the spd and set appropriate directories, also redirect output to the spd.log file.
+#start the spd and set appropriate directories/ports, also redirect output to the spd.log file.
 def start_spd():
     command = f"nohup {common.DIR_CURRENT}/spd"
     f" --profile-directory {common.DIR_PROFILES}"
@@ -29,7 +29,7 @@ def start_spd():
     f" --siamux-addr :{common.config['host']['siamux_port']}"
     f" --siamux-addr-ws :{common.config['host']['siamux_ws_port']}"
     f" --host-api-addr :{common.config['host']['host_api_port']}"
-    " -M gtcwh > spd.log &"
+    " -M gtcwh &"
     os.system(command)
 
 #Init the spd. This is first first startup.
@@ -46,7 +46,7 @@ def startup():
 
 def interval1_function():
     while True:
-        startup()
+        startup() #Check to make sure were running.
         sleep(300) # 5 minutes
 
 # def interval2_function():

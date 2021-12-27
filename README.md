@@ -25,8 +25,10 @@
 - `git clone https://github.com/klynicol/scprime.git`
 - `cd scprime`
 - `python3 install.py 1.6.0`
-- `vi .ini`
-- IMPORTANT, change the ports in .ini file before running the spd.
+- `vi .ini` IMPORTANT, change the ports in .ini file before running the spd.
+- `cd ..`
+- `chmod -R 777 scprime` permissions required for entire folder structure
+- `cd scprime`
 - `python3 run.py init`
 - BLOCKCHAIN NOW SYNCING, check back in a few hours and check consensus with spc. While this is running you can work on port forwarding.
 - `cd current`
