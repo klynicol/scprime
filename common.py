@@ -39,10 +39,10 @@ def log(level, message):
     logging.__getattribute__(level)(message)
 
 #Run a command and rerturn the results as array
-def run_process(cmd):
+def run_process(cmd, split_char = "\n"):
     args = cmd.split()
     result = run(args, capture_output=True, text=True)
-    return repr(result.stdout).split("\n")
+    return repr(result.stdout).split(split_char)
 
     #Check if process is already running
 def is_process_running(process_name):

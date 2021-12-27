@@ -31,11 +31,10 @@
 - `cd scprime`
 - `python3 run.py init`
 - BLOCKCHAIN NOW SYNCING, check back in a few hours and check consensus with spc. While this is running you can work on port forwarding.
-- `cd current`
-- `./spc wallet init`
+- `~/scprime/current/spc wallet init`
 - copy paste seed to .ini file and backup documents
 - add folders to all the drives
-- `./spc host folder add /mnt/sda1/folder1 3600GB`
+- `~/scprime/current/spc host folder add /mnt/sda1/folder1 3600GB`
  * disk total space - 50GB / number of folders, 50GB recommended by the docs to prevent corruption
 - `sudo systemctl status cron.service` makes sure cron tabs service in enabled
 - `crontab -e` add cron services

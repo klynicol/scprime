@@ -4,7 +4,9 @@ Run from cron tab
 Check the general health of the disks
 '''
 import sys
-sys.path.append("../scprime")
+import os.path
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 import common
 
 ''' Uses smartctl to make a broad assessment about disk health
@@ -12,7 +14,7 @@ import common
 def smartctl():
     for disk_name in common.config['host']['drives'].split("|"):
         line_count = 0
-        for line in common.run_process(f"smartctl -H /dev/{disk_name}"):
+        for line in common.run_process(f"smartctl -H /dev/{disk_name}", '\\n'):
             line_count += 1
             if(line_count == 1):
                 continue

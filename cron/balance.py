@@ -6,7 +6,9 @@ if the balance is over the max_wallet_balance parameter
 send funds to the to_address
 '''
 import sys
-sys.path.append("../scprime")
+import os.path
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 import common
 
 common.log("info", "Starting balance.py cron task")

@@ -37,7 +37,7 @@ def start_spd(init = False):
 
 #Init the spd. This is first first startup.
 if(parm_1 == 'init'):
-    start_spd()
+    start_spd(True)
     common.log('info', "Initialization parameter detected, starting SPD and exiting python script")
     sys.exit()
 
