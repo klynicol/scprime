@@ -13,9 +13,9 @@ import pathlib
 import configparser
 import logging
 from datetime import datetime
+import pytz
 
 DIR_BASE = str(pathlib.Path.home()) + "/scprime/"
-# DIR_BASE = "/home/ubuntu/scprime/"
 DIR_ZIP = DIR_BASE + "zip"
 DIR_CURRENT = DIR_BASE + "current"
 DIR_DATA = DIR_BASE + "data"
@@ -34,7 +34,8 @@ logging.basicConfig(filename=f"{DIR_BASE}run.log", level=logging.INFO)
 #Log helper function
 #level= info | debug | warning | error
 def log(level, message):
-    dt = datetime.now().strftime("%Y-%m-%d %I:%M%p")
+    dt = datetime.now(tz=pytz.utc)
+    dt.astimezone(pytz.timezone("America/Chicago")).strftime("%Y-%m-%d %I:%M%p")
     message = f" {dt}: {message}"
     print(message)
     logging.__getattribute__(level)(message)

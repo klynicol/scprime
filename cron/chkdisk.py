@@ -14,7 +14,7 @@ import common
 def smartctl():
     for disk_name in common.config['host']['drives'].split("|"):
         line_count = 0
-        for line in common.run_process(f"smartctl -H /dev/{disk_name}", '\\n'):
+        for line in common.run_process(f"sudo smartctl -H /dev/{disk_name}", '\\n'):
             line_count += 1
             if(line_count == 1):
                 continue

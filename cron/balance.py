@@ -47,7 +47,7 @@ def check_balance():
                 send_ammount = common.scp_string(send_ammount)
                 to_address = common.config['host']['to_address']
                 common.log("info", f"Sending {send_ammount}SCP to {to_address}")
-                response = common.run_process(f"{common.DIR_CURRENT}/spc send scprimecoins {send_ammount}SCP {to_address}")
+                response = common.run_process(f"{common.DIR_CURRENT}/spc wallet send scprimecoins {send_ammount}SCP {to_address}")
                 common.log("info", response.join("\n"))
 
 check_balance()

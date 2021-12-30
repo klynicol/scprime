@@ -17,7 +17,7 @@ if(len(sys.argv) <= 1):
     sys.exit()
 
 version = sys.argv[1]
-version_full = f'ScPrime-v{version}-linux-arm64'
+version_full = f'ScPrime-v{version}-linux-amd64'
 zip_filename = f'{version_full}.zip'
 zip_url =  f'https://releases.scpri.me/{version}/{zip_filename}'
 zip_file_path = common.DIR_ZIP + "/" + version + ".zip"
@@ -35,30 +35,30 @@ mkdir(common.DIR_EXTRACT)
 mkdir(common.DIR_PROFILES)
 mkdir(common.DIR_REPORT_DATA)
 
-#see if we can pick out the hard drive names on the device
-line_count = 0
-drives = []
-for line in common.run_process("lsblk -S", '\\n'):
-    line_count += 1
-    if(line_count == 1 or not line):
-        continue
-    drives.extend(line.split(" ")[0])
+if(not os.path.isfile(f"{common.DIR_BASE}.ini")):
+    #see if we can pick out the hard drive names on the device
+    line_count = 0
+    drives = []
+    for line in common.run_process("lsblk -S", '\\n'):
+        line_count += 1
+        if(line_count == 1 or not line):
+            continue
+        drives.extend(line.split(" ")[0])
 
-#make the .ini
-import configparser
-ini = configparser.ConfigParser()
-ini['host'] = {
-    'dir_base' : 
-    'seed': '',
-    'drives': '|'.join(drives),
-    'max_wallet_balance' : 500,
-    'to_address' : 'dfaeieiofajfkeakefjdjd',
-    'host_port' : 4282,
-    'siamux_port': 4283,
-    'host_api_port' : 4285
-}
-with open('.ini', 'w') as configfile:
-    ini.write(configfile)
+    #make the .ini
+    import configparser
+    ini = configparser.ConfigParser()
+    ini['host'] = {
+        'seed': '',
+        'drives': '|'.join(drives),
+        'max_wallet_balance' : 500,
+        'to_address' : 'dfaeieiofajfkeakefjdjd',
+        'host_port' : 4282,
+        'siamux_port': 4283,
+        'host_api_port' : 4285
+    }
+    with open('.ini', 'w') as configfile:
+        ini.write(configfile)
 
 #Download the file into the common.DIR_ZIP folder
 def download_cli(url):
