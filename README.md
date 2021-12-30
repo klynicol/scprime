@@ -4,7 +4,7 @@
 ***
 - `sudo apt install python`
 - `sudo apt install smartmontools`
-- `sudo apt install pip`
+- `sudo apt install python3-pip`
 - `pip install pytz`
 - `sudo apt update`
 
