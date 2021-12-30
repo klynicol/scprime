@@ -4,6 +4,8 @@
 ***
 - `sudo apt install python`
 - `sudo apt install smartmontools`
+- `sudo apt install pip`
+- `pip install pytz`
 - `sudo apt update`
 
 ### drive setup
