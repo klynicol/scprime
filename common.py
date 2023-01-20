@@ -65,6 +65,14 @@ def move_contents(src, dst):
     for elem in os.listdir(src):
         move(os.path.join(src, elem), dst=dst)
 
+#Chmod a directory and all of its contents
+def chmod_recursive(path, mode):
+    for root, dirs, files in os.walk(path):
+        for d in dirs:
+            os.chmod(os.path.join(root, d), mode)
+        for f in files:
+            os.chmod(os.path.join(root, f), mode)
+
 def send_email(subject, body, to="mwicklinedev@gmail.com"):
     msg = EmailMessage()
     msg['From'] = "noreply@markwickline.com"
