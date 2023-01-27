@@ -65,6 +65,14 @@ def move_contents(src, dst):
     for elem in os.listdir(src):
         move(os.path.join(src, elem), dst=dst)
 
+#Chmod a directory and all of its contents
+def chmod_recursive(path, mode):
+    for root, dirs, files in os.walk(path):
+        for d in dirs:
+            os.chmod(os.path.join(root, d), mode)
+        for f in files:
+            os.chmod(os.path.join(root, f), mode)
+
 def send_email(subject, body, to="mwicklinedev@gmail.com"):
     msg = EmailMessage()
     msg['From'] = "noreply@markwickline.com"
@@ -92,34 +100,37 @@ GS (giga, 10^9 SCP)
 TS (tera, 10^12 SCP)
 '''
 units = {
-    'h' : {
+    'H' : {
         'notation': -27
     },
-    'ps' : {
+    'pS' : {
         'notation': -12
     },
-    'ns' : {
+    'nS' : {
         'notation': -9
     },
-    'us' : {
+    'uS' : {
         'notation': -6
     },
-    'ms' : {
+    'mS' : {
         'notation': -3
     },
     'scp' : {
         'notation': 0
     },
-    'ks' : {
+    'SCP' : {
+        'notation': 0
+    },
+    'KS' : {
         'notation': 3
     },
-    'ms' : {
+    'MS' : {
         'notation': 6
     },
-    'gs' : {
+    'GS' : {
         'notation': 9
     },
-    'ts' : {
+    'TS' : {
         'notation': 12
     },
 }
@@ -129,7 +140,7 @@ def parse_scp(raw):
     if len(decimal) == 0:
         return False
     decimal = decimal[0]
-    unit = raw.replace(decimal, "").lower()
+    unit = raw.replace(decimal, "")
     if unit not in units:
         return False
     scp = float(f"{decimal}e{units[unit]['notation']}")

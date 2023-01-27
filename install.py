@@ -101,3 +101,6 @@ common.move_contents(extracted_folder, common.DIR_CURRENT)
 
 #clean up the extracted_folder
 shutil.rmtree(extracted_folder)
+
+#chmod the current folder
+common.chmod_recursive(common.DIR_CURRENT, 0o755)
