@@ -1,0 +1,1130 @@
+{
+  "result": "success",
+  "data": [
+    {
+      "type": "A",
+      "record": "mail.cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "editable": "0",
+      "value": "64.90.62.162",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "value": "0 mx1.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "MX",
+      "zone": "cruisyvans.com",
+      "record": "mail.cruisyvans.com",
+      "editable": "0"
+    },
+    {
+      "record": "mail.cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "type": "MX",
+      "editable": "0",
+      "value": "0 mx2.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "type": "A",
+      "record": "www.cruisyvans.com",
+      "zone": "cruisyvans.com"
+    },
+    {
+      "zone": "cruisyvans.com",
+      "record": "webmail.cruisyvans.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "record": "cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "type": "A"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx1.mailchannels.net.",
+      "editable": "0",
+      "zone": "cruisyvans.com",
+      "record": "cruisyvans.com",
+      "type": "MX"
+    },
+    {
+      "editable": "0",
+      "zone": "cruisyvans.com",
+      "record": "cruisyvans.com",
+      "type": "MX",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "0 mx2.mailchannels.net."
+    },
+    {
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "TXT",
+      "record": "cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "editable": "0"
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "record": "www.webmail.cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "69.163.136.138"
+    },
+    {
+      "editable": "0",
+      "zone": "cruisyvans.com",
+      "record": "autoconfig.cruisyvans.com",
+      "type": "CNAME",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "autoconfig.dreamhost.com"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq5gFniZtoF+8sAtd22VZt3TnpNCvETdVlM8T6hc52p0QkiiB2iwgMv/54NK1+ojIRe19B7mLcn2HcYVuvXGH76v/DU0tpPye7AR4Ll28e+AM6DJVmWKgmiy5fT35SURF/c1jJpgYqQmAVRXstcBM2ptogFFWe4sQNG1Yx6lihT+5nwSW1ivp/TGazt5mi0udYJXjdqr2RNRL1Dyu5H1oq4UGm/CV74wQZYxz9OY8fDRhB4NvSbCRBX6A0akNmY8PcQLy8YMcm009SzpjcAzllIzdfMfoIOlPWEICYE01a/l5CH7SyA6nUqtsWf4xilA8uY+b0FMlFSpRx9higKAcjwIDAQAB",
+      "editable": "0",
+      "type": "TXT",
+      "zone": "cruisyvans.com",
+      "record": "dreamhost._domainkey.cruisyvans.com"
+    },
+    {
+      "type": "SRV",
+      "record": "_autodiscover._tcp.cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "editable": "0",
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "value": "69.163.136.97",
+      "account_id": "2328107",
+      "comment": "",
+      "zone": "cruisyvans.com",
+      "record": "mailboxes.cruisyvans.com",
+      "type": "A",
+      "editable": "0"
+    },
+    {
+      "record": "www.mailboxes.cruisyvans.com",
+      "zone": "cruisyvans.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlfdQx6X95iURhL6/+gcHU5kDSjYyg7Eceq5XRKS3J4Y79CWIFwSWbL1ak+t+mGICK3IlS9To5gIZAbafjIZBhMFHk73MBbj+tYs16dXLtZiiB0r0FlcmK3Fhq63wXhoijJuKS520ucFr7RaNXW7FDI1fIz6OizJkE6k4KDbFGLrBGo+c9K2ooCUOAA72oMg2EbzuXVq2igvy57Npu+5awVi2cv+hQmQbgFnQrdjpfF/RMKcQSm9VZDpMxx6YKj+Fsvco9ts/PRzJ9pFP7RcnxzRLSG+skaiHG6bTi2h2VvjB4ZoV5YAHQATKgkZ7Rm7apnMNVQE9BuIGJMyqwikymwIDAQAB",
+      "comment": "",
+      "account_id": "2328107",
+      "record": "dreamhost._domainkey.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "TXT",
+      "editable": "0"
+    },
+    {
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "comment": "",
+      "account_id": "2328107",
+      "record": "_autodiscover._tcp.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "SRV",
+      "editable": "0"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "69.163.136.97",
+      "editable": "0",
+      "type": "A",
+      "zone": "crushedkettle.com",
+      "record": "mailboxes.crushedkettle.com"
+    },
+    {
+      "value": "69.163.136.97",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "A",
+      "record": "www.mailboxes.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "editable": "0"
+    },
+    {
+      "editable": "0",
+      "record": "mail.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "64.90.62.162"
+    },
+    {
+      "editable": "0",
+      "record": "mail.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "MX",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx1.mailchannels.net."
+    },
+    {
+      "editable": "0",
+      "type": "MX",
+      "zone": "crushedkettle.com",
+      "record": "mail.crushedkettle.com",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx2.mailchannels.net."
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "zone": "crushedkettle.com",
+      "record": "www.crushedkettle.com",
+      "type": "A"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "type": "A",
+      "record": "crushedkettle.com",
+      "zone": "crushedkettle.com"
+    },
+    {
+      "editable": "0",
+      "type": "MX",
+      "zone": "crushedkettle.com",
+      "record": "crushedkettle.com",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx1.mailchannels.net."
+    },
+    {
+      "type": "MX",
+      "zone": "crushedkettle.com",
+      "record": "crushedkettle.com",
+      "editable": "0",
+      "value": "0 mx2.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "record": "crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "TXT",
+      "editable": "0",
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "record": "webmail.crushedkettle.com",
+      "zone": "crushedkettle.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "69.163.136.138"
+    },
+    {
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "zone": "crushedkettle.com",
+      "record": "www.webmail.crushedkettle.com",
+      "editable": "0"
+    },
+    {
+      "type": "CNAME",
+      "zone": "crushedkettle.com",
+      "record": "autoconfig.crushedkettle.com",
+      "editable": "0",
+      "value": "autoconfig.dreamhost.com",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "record": "www.freezerfare.com",
+      "zone": "freezerfare.com",
+      "type": "A",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "zone": "freezerfare.com",
+      "record": "freezerfare.com",
+      "editable": "1"
+    },
+    {
+      "value": "0 mx1.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "MX",
+      "record": "freezerfare.com",
+      "zone": "freezerfare.com",
+      "editable": "0"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx2.mailchannels.net.",
+      "editable": "0",
+      "type": "MX",
+      "record": "freezerfare.com",
+      "zone": "freezerfare.com"
+    },
+    {
+      "type": "TXT",
+      "zone": "freezerfare.com",
+      "record": "freezerfare.com",
+      "editable": "0",
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "record": "webmail.freezerfare.com",
+      "zone": "freezerfare.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "zone": "freezerfare.com",
+      "record": "www.webmail.freezerfare.com",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "69.163.136.138"
+    },
+    {
+      "record": "autoconfig.freezerfare.com",
+      "zone": "freezerfare.com",
+      "type": "CNAME",
+      "editable": "0",
+      "value": "autoconfig.dreamhost.com",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "record": "mail.freezerfare.com",
+      "zone": "freezerfare.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "64.90.62.162"
+    },
+    {
+      "record": "mail.freezerfare.com",
+      "zone": "freezerfare.com",
+      "type": "MX",
+      "editable": "0",
+      "value": "0 mx1.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "value": "0 mx2.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107",
+      "zone": "freezerfare.com",
+      "record": "mail.freezerfare.com",
+      "type": "MX",
+      "editable": "0"
+    },
+    {
+      "record": "www.mailboxes.freezerfare.com",
+      "zone": "freezerfare.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "type": "TXT",
+      "record": "dreamhost._domainkey.freezerfare.com",
+      "zone": "freezerfare.com",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv30U+EDtIlQ6m2TuaPxqUKMswcvZN8nWh6Lwml2uBRKCgU2IzUjFLKuHvUtWs0BUhFxbQlg2LSidgFxYVphD2yXfOR0SrM0520uiFgio5f6H65xIZupD+Pse+kN0xx+zcVgeqnOKhQh0xEoI/lFqNRngqveSEjoi/eSwIN3JZMC9SuG14T9GqIwx/ytniIKQM8z+0hBaWk1EMhyY3U4bGEI7u8pg6GSvXUi4XdCLnhr7qj55bwkKxuMiSZ0j/ekxIXHMole4E6QDtc+AFAaHlLAaiE+lBYx9RnZmBh8OraNeJgzMbNraQKZsIVboQoPC3PoneWSuvDf+cu8J+YhNKwIDAQAB"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "editable": "0",
+      "type": "SRV",
+      "zone": "freezerfare.com",
+      "record": "_autodiscover._tcp.freezerfare.com"
+    },
+    {
+      "type": "A",
+      "record": "mailboxes.freezerfare.com",
+      "zone": "freezerfare.com",
+      "editable": "0",
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "1",
+      "record": "frozenza.com",
+      "zone": "frozenza.com",
+      "type": "A",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "type": "A",
+      "zone": "frozenza.com",
+      "record": "www.frozenza.com"
+    },
+    {
+      "record": "geoapi.online",
+      "zone": "geoapi.online",
+      "type": "A",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "value": "173.22.163.66",
+      "account_id": "2328107",
+      "comment": "",
+      "zone": "geoapi.online",
+      "record": "www.geoapi.online",
+      "type": "A",
+      "editable": "1"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "type": "A",
+      "record": "www.glimmerday.com",
+      "zone": "glimmerday.com"
+    },
+    {
+      "editable": "1",
+      "record": "glimmerday.com",
+      "zone": "glimmerday.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "zone": "markchapter4.com",
+      "record": "www.markchapter4.com",
+      "type": "A"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "type": "A",
+      "zone": "markchapter4.com",
+      "record": "markchapter4.com"
+    },
+    {
+      "type": "A",
+      "zone": "markwickline.com",
+      "record": "ftp.markwickline.com",
+      "editable": "0",
+      "value": "173.236.249.206",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.236.249.206",
+      "editable": "0",
+      "type": "A",
+      "zone": "markwickline.com",
+      "record": "markwickline.com"
+    },
+    {
+      "value": "173.236.249.206",
+      "account_id": "2328107",
+      "comment": "",
+      "record": "www.markwickline.com",
+      "zone": "markwickline.com",
+      "type": "A",
+      "editable": "0"
+    },
+    {
+      "type": "A",
+      "zone": "markwickline.com",
+      "record": "mysql.markwickline.com",
+      "editable": "0",
+      "value": "208.113.245.2",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "editable": "0",
+      "zone": "markwickline.com",
+      "record": "ssh.markwickline.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.236.249.206"
+    },
+    {
+      "type": "A",
+      "record": "nutbox.online",
+      "zone": "nutbox.online",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "zone": "nutbox.online",
+      "record": "www.nutbox.online",
+      "type": "A",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "record": "ftp.pizza-cloud.com",
+      "zone": "pizza-cloud.com",
+      "type": "A",
+      "editable": "1",
+      "value": "67.4.144.165",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "type": "A",
+      "zone": "pizza-cloud.com",
+      "record": "pizza-cloud.com",
+      "editable": "1",
+      "value": "67.4.144.165",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "67.4.144.165",
+      "editable": "1",
+      "zone": "pizza-cloud.com",
+      "record": "www.pizza-cloud.com",
+      "type": "A"
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "record": "mail.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "64.90.62.162"
+    },
+    {
+      "value": "0 mx1.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "MX",
+      "record": "mail.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "editable": "0"
+    },
+    {
+      "value": "0 mx2.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "MX",
+      "zone": "pizzakraken.com",
+      "record": "mail.pizzakraken.com",
+      "editable": "0"
+    },
+    {
+      "value": "autoconfig.dreamhost.com",
+      "comment": "",
+      "account_id": "2328107",
+      "record": "autoconfig.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "type": "CNAME",
+      "editable": "0"
+    },
+    {
+      "type": "A",
+      "zone": "pizzakraken.com",
+      "record": "www.webmail.pizzakraken.com",
+      "editable": "0",
+      "value": "69.163.136.138",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "zone": "pizzakraken.com",
+      "record": "www.pizzakraken.com",
+      "type": "A",
+      "editable": "1",
+      "value": "173.28.19.26",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "type": "A",
+      "record": "pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "editable": "1",
+      "value": "173.28.19.26",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "0 mx1.mailchannels.net.",
+      "editable": "0",
+      "record": "pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "type": "MX"
+    },
+    {
+      "type": "MX",
+      "zone": "pizzakraken.com",
+      "record": "pizzakraken.com",
+      "editable": "0",
+      "value": "0 mx2.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "record": "pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "type": "TXT",
+      "editable": "1",
+      "value": "google-site-verification=kUPE2U9f1f5nIQqLh0n1kH8z04lDqTh_V3EVeuiHWe8",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "type": "TXT",
+      "zone": "pizzakraken.com",
+      "record": "pizzakraken.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "69.163.136.138",
+      "editable": "0",
+      "record": "webmail.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "type": "A"
+    },
+    {
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "zone": "pizzakraken.com",
+      "record": "mailboxes.pizzakraken.com",
+      "editable": "0"
+    },
+    {
+      "type": "SRV",
+      "record": "_autodiscover._tcp.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "editable": "0",
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvqSOum61WQJjvbBJeWGEGVbhnGAIfDedsbrvmYgoLpXFSlIj/H5PyPag9atjSOqAEnI17nHOzgX5TXZe/XEHqBZ0a5NYU3MqRgvjHbD4HeJj1E7TGzHUxo99FOEq0Xbv1lAKWFTAZJuyj8tzzxdzcsYob2DeX4wZb8dD+TYZ2zjB2zsDawbKIkqxMeqLUIlsWXop2JwbOtwVBS5i2ub0B16S/zgh/0+1eQv6Yp6v/Ln6xV4c94/oRJ/o0DqgqjvMahD08u0wAT76vcgQXsk7O4GKhWZHwGw7B4n/8ComaBlj0ZmKEFJp7EGdSz1sJXOj63uU4ACt8gS4cs0Fe9GR4wIDAQAB",
+      "comment": "",
+      "account_id": "2328107",
+      "zone": "pizzakraken.com",
+      "record": "dreamhost._domainkey.pizzakraken.com",
+      "type": "TXT",
+      "editable": "0"
+    },
+    {
+      "record": "www.mailboxes.pizzakraken.com",
+      "zone": "pizzakraken.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "1",
+      "zone": "raetees.com",
+      "record": "raetees.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "23.227.38.65"
+    },
+    {
+      "editable": "1",
+      "zone": "raetees.com",
+      "record": "www.raetees.com",
+      "type": "CNAME",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "shops.myshopify.com"
+    },
+    {
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107",
+      "zone": "routinepros.com",
+      "record": "www.routinepros.com",
+      "type": "A",
+      "editable": "1"
+    },
+    {
+      "editable": "1",
+      "type": "A",
+      "record": "routinepros.com",
+      "zone": "routinepros.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66"
+    },
+    {
+      "editable": "1",
+      "zone": "searchforpizza.com",
+      "record": "searchforpizza.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.163.66"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "record": "www.searchforpizza.com",
+      "zone": "searchforpizza.com",
+      "type": "A"
+    },
+    {
+      "zone": "stonyloam.com",
+      "record": "mysql.stonyloam.com",
+      "type": "A",
+      "editable": "0",
+      "value": "208.113.245.2",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.236.249.206",
+      "editable": "0",
+      "zone": "stonyloam.com",
+      "record": "www.stonyloam.com",
+      "type": "A"
+    },
+    {
+      "record": "www.strandshoes.com",
+      "zone": "strandshoes.com",
+      "type": "A",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66",
+      "editable": "1",
+      "zone": "strandshoes.com",
+      "record": "strandshoes.com",
+      "type": "A"
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "zone": "theadoracustoms.com",
+      "record": "mailboxes.theadoracustoms.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "69.163.136.97"
+    },
+    {
+      "editable": "0",
+      "type": "TXT",
+      "zone": "theadoracustoms.com",
+      "record": "dreamhost._domainkey.theadoracustoms.com",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz53aw2Xf/y4pYZW2k90GBRNbYGo6Pf+1HvSPkP5iuwdbtuRVVCvw4HnL8CjKVSBWCuHOCa0p/xlP/5ynxlwRrobdU637kXzAoJBw6GdZq/4B0j5U6Q/Ui7L2d8eGiy/6k78ti5g393W7FTTZdFOPKv/hjuZV6f/i7HkzzqhtHwHvAYc/iSQQzksD+E2t5TnDVnyXu//YIm5xciPG0DMWeu8U2z50CC1iz5AQktlQwU673ngdGeocY66WFtJZIAc1DjFhFfbv4jb/kskbkc4oB+BD8jTRbxkf93OZu86CTVuM9HZzWEPT7T4M1liWRkjr0Bt0XYsk0BIIuD8WAqSRawIDAQAB"
+    },
+    {
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "SRV",
+      "record": "_autodiscover._tcp.theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "editable": "0"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "69.163.136.97",
+      "editable": "0",
+      "type": "A",
+      "record": "www.mailboxes.theadoracustoms.com",
+      "zone": "theadoracustoms.com"
+    },
+    {
+      "value": "64.90.62.162",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "zone": "theadoracustoms.com",
+      "record": "mail.theadoracustoms.com",
+      "editable": "0"
+    },
+    {
+      "type": "MX",
+      "zone": "theadoracustoms.com",
+      "record": "mail.theadoracustoms.com",
+      "editable": "0",
+      "value": "0 mx1.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "zone": "theadoracustoms.com",
+      "record": "mail.theadoracustoms.com",
+      "type": "MX",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "0 mx2.mailchannels.net."
+    },
+    {
+      "record": "www.webmail.theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "type": "A",
+      "editable": "0",
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "autoconfig.dreamhost.com",
+      "editable": "0",
+      "type": "CNAME",
+      "record": "autoconfig.theadoracustoms.com",
+      "zone": "theadoracustoms.com"
+    },
+    {
+      "editable": "1",
+      "record": "theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.22.154.241"
+    },
+    {
+      "value": "0 mx1.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107",
+      "record": "theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "type": "MX",
+      "editable": "0"
+    },
+    {
+      "type": "MX",
+      "zone": "theadoracustoms.com",
+      "record": "theadoracustoms.com",
+      "editable": "0",
+      "value": "0 mx2.mailchannels.net.",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "record": "theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "type": "TXT",
+      "editable": "0",
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "value": "69.163.136.138",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "A",
+      "zone": "theadoracustoms.com",
+      "record": "webmail.theadoracustoms.com",
+      "editable": "0"
+    },
+    {
+      "editable": "1",
+      "record": "www.theadoracustoms.com",
+      "zone": "theadoracustoms.com",
+      "type": "A",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.154.241"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.28.19.26",
+      "editable": "1",
+      "zone": "thegraphiteknight.com",
+      "record": "thegraphiteknight.com",
+      "type": "A"
+    },
+    {
+      "value": "173.28.19.26",
+      "account_id": "2328107",
+      "comment": "",
+      "zone": "thegraphiteknight.com",
+      "record": "www.thegraphiteknight.com",
+      "type": "A",
+      "editable": "1"
+    },
+    {
+      "editable": "1",
+      "zone": "treadlocker.com",
+      "record": "treadlocker.com",
+      "type": "A",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.22.163.66"
+    },
+    {
+      "type": "A",
+      "zone": "treadlocker.com",
+      "record": "www.treadlocker.com",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107"
+    },
+    {
+      "editable": "0",
+      "zone": "vendvibe.co",
+      "record": "dreamhost._domainkey.vendvibe.co",
+      "type": "TXT",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "v=DKIM1; k=rsa; h=sha256;  p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzcSoyAynG6qF2Zn+rjjFRX177UsSCFtzTI2v6z5ynox+xGDZHPneMLvQHdbuI08T52XV7J42CZSpQc1jkSVOmqVzg7q+pa8w357tHjPdhGxE9NoC5hVuBs5oXwCk4TcfKp2+QolkX3PUsaFFTRfG6BIql283h39ajTKyxCC8mdHwnUp1o/XT8oGM//F1ylMH/flIJlw2UamHWY1BfEOIuhgKtuF9JOi8mXP1t7v9ohrotCQFnZd7NvdBV+RPbGcVHfjDIxHzg7XwC+s0UZd6EHnGVt+4+MMBD22wiEKxfWimxI1ZVwBIpp7XEIfYoyBJZtuEHE8dIDiviHGrsLCWFQIDAQAB"
+    },
+    {
+      "value": "5 0 443 autoconfig.dreamhost.com",
+      "account_id": "2328107",
+      "comment": "",
+      "type": "SRV",
+      "zone": "vendvibe.co",
+      "record": "_autodiscover._tcp.vendvibe.co",
+      "editable": "0"
+    },
+    {
+      "editable": "0",
+      "type": "A",
+      "zone": "vendvibe.co",
+      "record": "mailboxes.vendvibe.co",
+      "account_id": "2328107",
+      "comment": "",
+      "value": "69.163.136.97"
+    },
+    {
+      "value": "69.163.136.97",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "zone": "vendvibe.co",
+      "record": "www.mailboxes.vendvibe.co",
+      "editable": "0"
+    },
+    {
+      "comment": "",
+      "account_id": "2328107",
+      "value": "64.90.62.162",
+      "editable": "0",
+      "type": "A",
+      "record": "mail.vendvibe.co",
+      "zone": "vendvibe.co"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "0 mx1.mailchannels.net.",
+      "editable": "0",
+      "record": "mail.vendvibe.co",
+      "zone": "vendvibe.co",
+      "type": "MX"
+    },
+    {
+      "value": "0 mx2.mailchannels.net.",
+      "account_id": "2328107",
+      "comment": "",
+      "zone": "vendvibe.co",
+      "record": "mail.vendvibe.co",
+      "type": "MX",
+      "editable": "0"
+    },
+    {
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "record": "webmail.vendvibe.co",
+      "zone": "vendvibe.co",
+      "editable": "0"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "173.28.19.26",
+      "editable": "1",
+      "type": "A",
+      "zone": "vendvibe.co",
+      "record": "vendvibe.co"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "0 mx1.mailchannels.net.",
+      "editable": "0",
+      "zone": "vendvibe.co",
+      "record": "vendvibe.co",
+      "type": "MX"
+    },
+    {
+      "account_id": "2328107",
+      "comment": "",
+      "value": "0 mx2.mailchannels.net.",
+      "editable": "0",
+      "zone": "vendvibe.co",
+      "record": "vendvibe.co",
+      "type": "MX"
+    },
+    {
+      "editable": "0",
+      "zone": "vendvibe.co",
+      "record": "vendvibe.co",
+      "type": "TXT",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all"
+    },
+    {
+      "editable": "1",
+      "record": "www.vendvibe.co",
+      "zone": "vendvibe.co",
+      "type": "A",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "173.28.19.26"
+    },
+    {
+      "value": "69.163.136.138",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "record": "www.webmail.vendvibe.co",
+      "zone": "vendvibe.co",
+      "editable": "0"
+    },
+    {
+      "editable": "0",
+      "type": "CNAME",
+      "record": "autoconfig.vendvibe.co",
+      "zone": "vendvibe.co",
+      "comment": "",
+      "account_id": "2328107",
+      "value": "autoconfig.dreamhost.com"
+    },
+    {
+      "record": "zebrawarriors.com",
+      "zone": "zebrawarriors.com",
+      "type": "A",
+      "editable": "1",
+      "value": "173.22.163.66",
+      "account_id": "2328107",
+      "comment": ""
+    },
+    {
+      "value": "173.22.163.66",
+      "comment": "",
+      "account_id": "2328107",
+      "type": "A",
+      "record": "www.zebrawarriors.com",
+      "zone": "zebrawarriors.com",
+      "editable": "1"
+    }
+  ]
+}

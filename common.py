@@ -46,6 +46,13 @@ def run_process(cmd, split_char = "\n"):
     result = run(args, capture_output=True, text=True)
     return repr(result.stdout).split(split_char)
 
+#Kill a process
+def kill_process(process_name):
+    for line in run_process("ps -Af"):
+        if(process_name in line):
+            pid = line.split(" ")[1]
+            os.kill(int(pid), 9)
+
     #Check if process is already running
 def is_process_running(process_name):
     tmp = os.popen("ps -Af").read()
@@ -136,7 +143,7 @@ units = {
 }
 def parse_scp(raw):
     raw = raw.replace(" ", "")
-    decimal = re.findall('\d*\.?\d+', raw)
+    decimal = re.findall(r'\d*\.?\d+', raw)
     if len(decimal) == 0:
         return False
     decimal = decimal[0]

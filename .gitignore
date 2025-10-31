@@ -18,3 +18,6 @@ __pycache__/
 test.py
 
 .py.swp
+
+update_ip_addres.log
+last_known_ip.txt
