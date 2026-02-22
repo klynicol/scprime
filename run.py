@@ -90,7 +90,7 @@ def startup_supervisor():
 def interval1_function():
     while True:
         startup_spd() #Check to make sure were running.
-        startup_supervisor() #Check to make sure were running.
+        # startup_supervisor() #Check to make sure were running.
         sleep(300) # 5 minutes
 
 # def interval2_function():
