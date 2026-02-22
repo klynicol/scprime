@@ -12,6 +12,7 @@ zip/
 nohup.out
 run.log
 spd.log
+supervisor.log
 
 __pycache__/
 
